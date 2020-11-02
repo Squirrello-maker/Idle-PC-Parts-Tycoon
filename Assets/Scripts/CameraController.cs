@@ -7,8 +7,6 @@ public class CameraController : MonoBehaviour
     Vector3 startPos;
     [SerializeField] float minZoom = 1f;
     [SerializeField] float maxZoom = 5f;
-    public float clampedXMin = -50;
-    public float clampedXMax = 50;
     public float clampedYMin = -50;
     public float clampedYMax = 50;
     // Start is called before the first frame update
