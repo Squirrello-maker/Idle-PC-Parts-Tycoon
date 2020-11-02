@@ -16,9 +16,14 @@ public class ClickDetection : MonoBehaviour
     void CheckRaycast(Vector3 touchPosition) 
     {
         RaycastHit hit;
-        if(Physics.Raycast(touchPosition, transform.forward, out hit) && hit.transform.tag != "Invicible") 
+        
+        if (Input.touchCount < 2)  
         {
-            Destroy(hit.transform.gameObject);
+            if (Physics.Raycast(touchPosition, transform.forward, out hit) && hit.transform.tag != "Invicible")
+            {
+                Destroy(hit.transform.gameObject);
+            }
         }
+
     }
 }
